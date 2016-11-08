@@ -60,6 +60,7 @@ body {
 }
 
 .splitScreen {
+    width:100%;
     background-color:green;
     display:inline-block;
 }
