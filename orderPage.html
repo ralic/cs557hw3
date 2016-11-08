@@ -8,65 +8,63 @@ Date and Time: Oct 30, 2016 4:09:45 PM
 Project Name: CS557C_HW4
 -->
 <html>
-    <head>
-        <title>Order Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="orderPage.css" >
-        <script src="cart.js"></script>
-    </head>
-    <body>
-        <!--style="background-color:blue"-->
-        <section>
-            Quality of Image :
-            <div >
-                <select name="imgQuality" id="imgQuality">
+
+<head>
+    <title>Order Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="orderPage.css">
+    <script src="cart.js"></script>
+    <script src="orderPage.js"></script>
+</head>
+
+<body>
+    <!--style="background-color:blue"-->
+    <section>
+        Quality of Image :
+        <div>
+            <select name="imgQuality" id="imgQuality">
                     <option value="Good">Good</option>
                     <option value="Very Good">Very Good</option>
                     <option value="Excellent">Excellent</option>
                 </select>
-            </div>
-            <!--<hr>-->
-            Types of Items : 
-            <div id="TypesofItems" >
-                <input type="radio" name="itemType" value="hard-copy-print"> Hard Copy Print 
-                <input type="radio" name="itemType" value="poster"> Poster
-                <input type="radio" name="itemType" value="coffee mug"> Coffee Mug
-                <input type="radio" name="itemType" value="T-Shirt"> T-Shirt
-            </div >
-            <!--<hr>-->
-            Glossy Finish:  (Default:No)
-            <div id="GlossyFinish">
-            </div>
+        </div>
+        <!--<hr>-->
+        Types of Items :
+        <div id="TypesofItems">
+            <input type="radio" name="itemType" value="hard-copy-print"> Hard Copy Print
+            <input type="radio" name="itemType" value="poster"> Poster
+            <input type="radio" name="itemType" value="coffee mug"> Coffee Mug
+            <input type="radio" name="itemType" value="T-Shirt"> T-Shirt
+        </div>
+        Quantity of Items:
+        <div>
+            <input type="number" name="QuantityofItems" id="QuantityofItems">
+        </div>
+        Glossy Finish: (Default:No)
+        <div id="GlossyFinish">
+        </div>
+        <!--hidden-->
+        <!--<hr> Calculate:-->
+        <!--<div>-->
+        <!--<button id="Calculate">Calculate</button>-->
+        <!--</div>-->
+        <!--<hr>-->
+        Add To Cart :
+        <div>
+            <button id="AddToCart" onclick="addOrderIntoCart()">Add To Cart</button>
+        </div>
+        <!--<hr>-->
+        Go To Cart:
+        <div>
+            <button id="GoToCart" onclick="addOrderIntoCart()">Go To Cart</button>
+        </div>
+        <hr>
+        <div>
+            Total Cost :
+            <label id="totalCost"> TotalCostNumber </label>
+        </div>
+    </section>
+</body>
 
-            Quantity of Items:
-            <div>
-                <input type="number" name="QuantityofItems" id="QuantityofItems"> 
-            </div>
-
-            <input type="submit" value="Submit">
-            <hr>
-            Calculate:
-            <div >
-                <button id="Calculate" >Calculate</button>
-            </div>
-            <!--<hr>-->
-            Add To Cart : 
-            <div>
-                <button id="AddToCart" click="addOrderIntoCart()">Calculate</button>
-            </div>
-            <!--<hr>-->
-            Go To Cart:
-            <div>
-                <button id="GoToCart">Calculate</button>
-            </div>
-            <hr>
-            <!--hidden-->
-            <div>
-                Total Cost : 
-                <label id="totalCost"> TotalCostNumber 
-            </div>
-        </section>
-
-    </body>
 </html>

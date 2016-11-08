@@ -8,41 +8,42 @@ Date and Time: Oct 30, 2016 2:26:12 PM
 Project Name: CS557C_HW4
 -->
 <html>
-    <head>
-        <title>Images Website</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="index.css" >
 
-    </head>
-    <body>
+<head>
+    <title>Images Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+</head>
 
-        <section class="largePhoto">  
-            <div class="navbar">
-                <div id="logo"> </div>
+<body>
+    <section class="largePhoto">
+        <div class="navbar">
+            <div id="logo"> </div>
+        </div>
+        <div>
+            <div id="photoText">Yue Hu's WebSite</div>
+            <div class="splitScreen"> Order Page<br>
+                <iframe src="./orderPage.html" id="orderPage" class="iframebox"></iframe>
             </div>
-            <div>
-                <div id="photoText">Yue Hu's WebSite</div>    
-                <div  class="splitScreen"> Order Page<br>
-                    <iframe src="./orderPage.html" id="orderPage"></iframe></div>
-                <div   class="splitScreen"> Cart Page<br>
-                    <iframe src="./cartPage.html" id="cartPage"></iframe></div>
-
-                <div class="splitScreen"> Order Page<br>
-                    <iframe src="./checkOutPage.html" id="checkoutPage"></iframe></div>
-
+            <div class="splitScreen"> Cart Page<br>
+                <iframe src="./cartPage.html" id="cartPage" class="iframebox"></iframe>
             </div>
-        </section>
-
-        <section class="pgDesc">
-            This is a photo image company.
-        </section>
-
-        <section id="mapScript"> 
-            <div id="gmap">
-                this is gmap.
+            <div class="splitScreen"> Order Page<br>
+                <iframe src="./checkOutPage.html" id="checkoutPage" class="iframebox"></iframe>
             </div>
-            <script>
+        </div>
+    </section>
+    <section class="pgDesc">
+        This is a photo image company.
+    </section>
+    <section id="mapScript">
+        <div id="gmap">
+            this is gmap.
+        </div>
+        <script>
                 function initMap() {
                     // Create a map object and specify the DOM element for display.
                     var gmap = new google.maps.Map(document.getElementById('gmap'), {
@@ -66,10 +67,11 @@ Project Name: CS557C_HW4
                     });
                 }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChOJmWhRfhw1Z5ztmyjPXEpvSu8dQK4M8&callback=initMap"
-                    async defer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChOJmWhRfhw1Z5ztmyjPXEpvSu8dQK4M8&callback=initMap" async
+            defer>
 
             </script>
-        </section>
-    </body>
+    </section>
+</body>
+
 </html>

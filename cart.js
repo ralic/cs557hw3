@@ -39,13 +39,11 @@ window.onload = function () {
     if (localStorage.shopCart === undefined) {
         // Initialize shopCart as empty array if there is nothing inside localStorage.
         shopCart = [];
-        localStorage.shopCart = shopCart;
+        localStorage.shopCart = JSON.stringify(shopCart);
     } else {
         // Copy existing shopcart into tmp shopCart
         shopCart = localStorage.shopCart;
     }
-    var glossyopts = ["Yes", "No"];
-    popChekboxbyID('GlossyFinish', glossyopts);
 };
 
 var clearShopCart = function () {
@@ -65,6 +63,7 @@ var createOrder = function () {
         // 3) Single selection of the input, use the id direction to acess the element.
         order.qty = Number(QuantityofItems.value);
     } catch (e) {
+        alert(e);
         console.log(e);
     }
     return order;
@@ -74,35 +73,15 @@ var addOrderIntoCart = function () {
     try {
         var newOrder = createOrder();
         shopCart.push(newOrder);
+        localStorage.shopCart=shopCart;
     } catch (e) {
         console.log(e);
     }
-    updatePagebyID("cartPage");
 };
+
 
 var updatePagebyID = function (page) {
     document.getElementById(page).contentWindow.location.reload();
-};
-
-var popChekboxbyID = function (tagid, list) {
-    var tag = document.getElementById(tagid);
-    for (var i in list) {
-        var textnode = document.createTextNode(list[i]);
-        var opts = document.createElement("input");
-        opts.type = "checkbox";
-        opts.name = tagid;
-        opts.value = list[i];
-        opts.addEventListener('change', function () {
-            var ckboxs = document.querySelectorAll('#GlossyFinish input[type="checkbox"]');
-            for (var j in ckboxs) {
-                ckboxs[j].checked = false;
-                this.checked = true;
-            }
-        });
-        tag.appendChild(opts);
-        tag.appendChild(textnode);
-    }
-    tag.appendChild(document.createElement("hr"), tag.childNodes[0]);
 };
 
 /*
