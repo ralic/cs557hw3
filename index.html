@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: index.html.html
+Date and Time: Oct 30, 2016 2:26:12 PM
+Project Name: CS557C_HW4
+-->
+<html>
+
+<head>
+    <title>Images Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <section class="largePhoto">
+        <div class="navbar">
+            <div id="logo"> </div>
+        </div>
+        <div>
+            <div id="photoText">Yue Hu's WebSite</div>
+            <div id="orderPage" class="splitScreen"> Order Page<br>
+                <iframe src="./orderPage.html"></iframe>
+            </div>
+            <div id="cartPage" class="splitScreen"> Cart Page<br>
+                <iframe src="./cartPage.html"></iframe>
+            </div>
+            <div id="checkOutPage" class="splitScreen"> Order Page<br>
+                <iframe src="./checkOutPage.html"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="pgDesc">
+        This is a photo image company.
+    </section>
+    <section id="mapScript">
+        <div id="gmap">
+            this is gmap.
+        </div>
+        <script>
+                function initMap() {
+                    // Create a map object and specify the DOM element for display.
+                    var gmap = new google.maps.Map(document.getElementById('gmap'), {
+                        center: {lat: 37.4790177, lng: -121.9247308},
+                        scrollwheel: false,
+                        zoom: 15
+                    });
+                    var goldStar = {
+                        path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+                        fillColor: 'yellow',
+                        fillOpacity: 0.8,
+                        scale: 0.1,
+                        strokeColor: 'gold',
+                        strokeWeight: 14
+                    };
+                    var marker = new google.maps.Marker({
+                        position: gmap.getCenter(),
+                        map: gmap,
+                        icon: goldStar,
+                        draggable: true
+                    });
+                }
+            </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChOJmWhRfhw1Z5ztmyjPXEpvSu8dQK4M8&callback=initMap" async
+            defer>
+
+            </script>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: index.html
+Date and Time: Oct 29, 2016 10:57:54 PM
+Project Name: CS557C_HW4
+-->
+<html>
+    <head>
+        <title>Image Web Site</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="hp.js"></script>
+        <link rel="stylesheet" href="hp.css">
+    </head>
+    <body>
+        <section>
+            <h1> Digital Photo Company</h1>
+        </section>
+        <!--Navigation-->
+        <!--        <section class="nav-container">
+                    <ul class="dropdown">
+                        <li class="navlist navtop home">Home </li>
+                        <li class="navlist" id="PurchaseTag" onclick="location.href = './purchase.html'">Purchase</li>
+                        <li class="navlist" id="ShopTag" onclick="location.href = './shop.html'">Shopping Cart </li>
+                    </ul>
+                </section>-->
+        <!--Right-side-->
+        <section class="right-side scn-resp ">
+            <h3>My Google Maps Demo</h3>
+            <div id="map" style="width:80%;height:200px"></div>
+
+            <script>
+                function myMap() {
+                    var mapCanvas = document.getElementById("map");
+                    var mapOptions = {
+                        center: new google.maps.LatLng(51.5, -0.2),
+                        zoom: 10
+                    }
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+        </section>
+
+
+        <!--Main-Section-->
+        <section class="main-section scn-resp">
+            <h2>Product</h2>
+            <h3>WHO WE ARE</h3>
+            <div id="corp_desc">
+                <h4>
+                    At Franklin & Bash, Inc., our vision is to make the world a better place by helping people share life's joy.
+                </h4>
+                Through our portfolio of premium lifestyle brands:
+                <ul>
+                    <li>Franklin & Bash</li>
+                    <li>Large Prints</li>
+                    <li>Wedding Cards</li>
+                    <li>3D Hologram </li>
+                    <li>Young Pubisher</li>
+                    <li>Groovebook</li>
+                </ul>
+                Our mission is to deepen your personal connections with the people who matter most with unique, personalized photo products. We enrich the lives of millions by inspiring you to be creative in how you preserve your memories and share your stories. Our brands share a common vision that allows us to help you make memorable moments last a lifetime.
+                Together, we are Franklin & Bash, Inc.
+            </div>
+        </section>
+
+        <!--Advertisement-->
+
+        <!--Footer-->
+        <footer>
+            <p>(c) 2016 The Referral Company</p>
+        </footer>
+    </body>
+</html>

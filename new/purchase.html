@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: purchase.html
+Date and Time: Oct 30, 2016 10:24:50 AM
+Project Name: CS557C_HW4
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <script type="text/javascript" src="hp.js"></script>
+        <link rel="stylesheet" href="hp.css">
+        <link rel="stylesheet" href="purchase.css">
+    </head>
+    <body>
+        <div class="PurchasePage">
+            <h4>Shopping Options</h4>
+            <!--            <p>Forest elephants do not live in trees but among them.</p>-->
+            <form action="submit" id="neworder">
+                <div id="ItemTypes">Types of items:<br></div>
+                <div id="ImgQuality">Image Quality:<br></div>
+                <hr>
+                <div id="GlossyFinish">Glossy finish:<br></div>
+                <div>Quantity: <input type ="text" id="Quantity" value="0"> ea</div><hr>
+            </form>
+
+            <table width="100%"><tr>
+                    <td><button class="cartbuttons" id="AddToCart"></button></td>
+                    <td><button class="cartbuttons" id="ViewCart"></button></td>
+                    <td><button class="cartbuttons" id="ClearCart"></button></td>
+                </tr>
+            </table>
+            <hr>
+
+
+            <!--Submit-->
+            <button id="sButton"></button>
+            <hr>
+            <p>
+                <span id="cartinfo" ></span>
+            </p>
+            <div><button id="howmuch"></button>
+                Cost of Selected Items:<label id="TotalCost"></label>
+                <span id="costinfo" ></span>
+                <!--Calculate-->
+            </div>
+        </div>
+    </body>
+</html>

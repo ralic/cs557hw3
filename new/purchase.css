@@ -1,0 +1,141 @@
+/*
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: purchase.css
+Date and Time: Oct 30, 2016 10:24:23 AM
+Project Name: CS557C_HW4
+*/
+/* 
+    Created on : Oct 30, 2016, 10:24:23 AM
+    Author     : YUE
+*/
+
+html {
+    /*    background-color:purple;
+        background-image:
+            url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);*/
+    height:100vh;
+    width :100%;
+}
+
+.PurchasePage {
+    color : white;
+    height: 100%;
+    width: calc(70%);
+    display:block;
+    margin:auto;
+}
+
+#AddToCart {
+    width: 80px;
+    height: 20px;
+    border-radius: 10%;
+    border-width:0;
+    /*BG control*/
+    background-size: 100px 60px;
+    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ8yRB_EzqIfwZ72KGp5byvLDu4gxG0fj0r0l4epPLQfqVqj9Ywsw);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#AddToCart:hover {
+    background-image: url(http://www.greatgrizzly.com/clientuploads/directory/Catalog/promotional/banner2x10buy1get1free-1432.gif); 
+    background-size: 70px 25px;
+}
+#ViewCart {
+    width: 80px;
+    height: 20px;
+    border-radius: 10%;
+    border-width:0;
+    /*BG control*/
+    background-size: 80px 20px;
+    background-image: url(http://www.caferacerkits.co.uk/wp-content/uploads/2012/07/View-Cart.png);
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+#ViewCart:hover {
+    background-image: url(http://img09.deviantart.net/a1e1/i/2009/121/3/3/buy_more_logo_vector_by_trebory6.png);
+    background-size: 70px 25px;
+}
+#ClearCart {
+    width: 80px;
+    height: 20px;
+    border-radius: 10%;
+    border-width:0;
+    /*BG control*/
+    background-size: 80px 20px;
+    background-image: url(https://www.2checkout.com/upload/images/clearcart-logo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+#GoToCart:hover {
+    background-image: url(http://img09.deviantart.net/a1e1/i/2009/121/3/3/buy_more_logo_vector_by_trebory6.png);
+    background-size: 70px 25px;
+}
+#howmuch {
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    border-width:2px;
+    border-style: ridge;
+    border-color:skyblue;
+    /*margin-left: calc(20%);*/
+    /*BG control*/
+    background-size: 100px 50px;
+    background-image: url(http://www.mybiginsurance.com/wp-content/uploads/2013/08/calculate.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+div .cartbuttons {
+    display: block;
+    margin:auto;
+}
+
+#sButton {
+    height : calc(20%);
+    width: calc(20%);
+    border-radius: 100%;
+    border-width:0;
+    /*BG control*/
+    background-size: calc(130%) calc(130%);
+    background-repeat: no-repeat;
+    background-position: center;   
+    background-image: url(http://offtopictim.com/wp-content/uploads/2012/05/submit_button_large_red.jpg);
+    /*Animation Using @keyframes*/
+    animation-name: roll;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes roll {
+    50% {
+        transform: translateX(390%);
+        background-image:url(http://saskatoonaces.ca/news_images/org_1181/Image/past-due.jpg);
+        background-size: calc(130%)  calc(130%);
+        border-radius: 10%;
+    }
+    100% {transform: translateX(0%);}
+}
+
+/*Mobile View*/
+@media screen and (max-width: 480px) {   
+    #gmap {
+        height:20vh;
+    }
+    #sButton {
+
+        height : calc(10%);
+        width: calc(20%);    
+        animation-duration: 3s;
+    }
+    @keyframes roll {
+        50% {
+            transform: translateX(390%);
+            background-image:url(http://saskatoonaces.ca/news_images/org_1181/Image/past-due.jpg);
+            border-radius: 10%;
+        }
+        100% {transform: translateX(0%);}
+    }
+}

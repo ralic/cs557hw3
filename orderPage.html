@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <!--
+    Student Info: Name=YueHu, ID=12980
+    Subject: CS557C_HW04_Fall_2016
+    Author: YUE
+    Filename: orderPage.html.html
+    Date and Time: Oct 30, 2016 4:09:45 PM
+    Project Name: CS557C_HW4
+    -->
+<html>
+    <head>
+        <title>Order Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="orderPage.css" >
+        <script src="orderPage.js"></script>
+    </head>
+    <body>
+        <!--style="background-color:blue"-->
+        <section id="orderPage">
+            <form action="/" method="get">
+                Quality of Image :
+                <div id="QualityofImage" >
+                    <select name="imgQuality">
+                        <option value="Good">Good</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                </div>
+                <!--<hr>-->
+                Types of Items : 
+                <div id="TypesofItems" >
+                    <input type="radio" name="itemType" value="i0"> Hard Copy Print 
+                    <input type="radio" name="itemType" value="i1"> Poster
+                    <input type="radio" name="itemType" value="i2"> Coffee Mug
+                    <input type="radio" name="itemType" value="i3"> T-Shirt
+                </div >
+                <!--<hr>-->
+                Glossy Finish:
+                <div id="GlossyFinish">
+                    <input type="checkbox" name="glossyFinish" value="yes"> Yes
+                    <input type="checkbox" name="glossyFinish"  value="yes"> No
+                </div>
+
+                Quantity of Items:
+                <div id="QuantityofItems">
+                    <input type="text"> 
+                </div>
+                <!--<hr>-->
+                Calculate:
+                <div id="Calculate">
+                    <button>Calculate</button>
+                </div>
+                <!--<hr>-->
+                Add To Cart : 
+                <div id="AddToCart">
+                    <button>Calculate</button>
+                </div>
+                <!--<hr>-->
+                Go To Cart:
+                <div id="GoToCart">
+                    <button>Calculate</button>
+                </div>
+                <hr>
+                <input type="submit" value="Submit">
+            </form>
+            <!--hidden-->
+            <div id="CostOfItem" >
+                Total Cost : 
+                <label id="totalCost"> TotalCostNumber</label>
+            </div>
+        </section>
+    </body>
+</html>

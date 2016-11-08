@@ -1,0 +1,270 @@
+/*
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: hp.css
+Date and Time: Oct 30, 2016 10:22:44 AM
+Project Name: CS557C_HW4
+*/
+/* 
+    Created on : Oct 30, 2016, 10:22:44 AM
+    Author     : YUE
+*/
+
+*{
+    overflow: hidden; 
+    text-overflow:ellipsis;
+}
+
+section{
+}
+
+html {
+    width :100%;
+}
+
+body {
+    height: 100%;
+    width :100%;
+    font-family: Myriad Pro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+#gmap {
+    border:0;
+    height:calc(70%);
+    width:calc(90%);
+    margin-left:calc(5%);
+}
+#corp_desc {
+    transform: translateY(-10%) ;
+    /*Animation Using @keyframes*/
+    overflow: hidden;
+    animation-name: corpdesc;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes corpdesc {
+    0% {opacity:0.9;  color: skyblue;}
+    50% {opacity:0.7;  color: blue;}
+    100% {opacity:0.9;  color: skyblue;}
+}
+
+@keyframes textjump {
+    50% {transform: translateY(-60%) rotate(-7deg);}
+    100% {transform: translateY(-60%) rotate(7deg);}
+}
+
+/*Nav-bar*/
+.nav-container{
+    width : 100%;
+    height : 20%;
+    border-radius: 10px;
+    text-align: center;
+    /*Color*/
+    /*background-image: linear-gradient(to right,lightsteelblue,lightcyan,lightsteelblue);*/
+}
+
+/* 
+CSS to control navbar buttons
+*/
+.navlist {
+    display:inline-block;
+    margin-left: -2%;
+    /*background-color: blueviolet;*/
+    background-color: lightblue;
+    border-radius: 5px;
+    border-style:solid;
+    width: calc(15%);
+}
+.navlist:hover {
+    /* Reverse color linear graident*/
+    background-color: lightblue;
+    /*    background-image: linear-gradient(to left,lightblue,lightgreen,lightyellow);*/
+    /* Mouse over pointer cursor*/
+    cursor:pointer;
+}
+.scn-resp {
+    /*font color*/
+    color : darkorange;
+    border-radius: 5%;
+    border-style: ridge;
+    border-width: 1px;
+}
+
+
+/*Desktop View*/
+@media screen and (min-width: 320px) {
+    .scn-resp {
+        display:inline-block;
+    }
+
+    .main-section{
+        /*Layout*/
+        margin-left: 1%;
+        height : 70vh;
+        width : 40%;
+        /*Color*/
+        /*background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);*/
+    }
+    .right-side{
+        /*Layout*/
+        display:inline-block;
+        height : 70vh;
+        width :15%;
+        position:relative;
+        left: 60%;
+        /*        float:right;*/
+        border-radius: 10px;
+
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightcyan,lightyellow);*/
+    }
+
+}
+
+/*Mobile View*/
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-image:
+            url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);
+    }
+    .nav-container{
+        /*height : 40%;*/
+        /*overflow-y: scroll*/
+    }
+    .navlist {
+        width: calc(80%);
+    }
+    .scn-resp {
+        font-size: calc(60%);
+    }
+    .main-section{
+
+        /*Layout*/
+        height: 38vh;
+        /*overflow-y: scroll;*/
+        /*Color*/
+        /*background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);*/
+    }
+    .right-side{
+        /*Layout*/
+        border-radius: 10px;
+        float:top;
+        height: 8vh;
+
+        overflow-y: scroll;
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightcyan,lightyellow);*/
+    }
+    .left-side{
+        /*Layout*/
+        height: 25vh;
+        border-radius: 10px;
+        overflow-y: scroll;
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightblue,blanchedalmond,lightgrey);*/
+    }
+    .dropdown .navlist {
+        display: none;
+        /*position: absolute;*/
+        background-color: #f9f9f9;
+        /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+        /*padding: 12px 16px;*/
+        z-index: 1;
+    }
+    .dropdown .navtop {
+        /*position: relative;*/
+        display: inline-block;
+    }
+
+    ul.dropdown:hover .navlist {
+        display: inline-block;
+    }
+
+    #ItemTypes input[type="radio"]{
+        display:inline-table;
+    }
+
+}
+
+
+/*    #ItemTypes input[type="radio"]{
+        display:list-item;
+    }*/
+
+/*
+Transitions for ads.
+*/
+
+
+aside {
+    /*Layout*/
+    border-radius: 10px;
+    width : 60vw;
+    height :4vh;
+    margin:auto;
+
+    /*Text Control*/
+    text-align: center;
+    font-size: calc(60%);
+    color: antiquewhite;
+
+    /*Color*/
+    /*background-image: linear-gradient(to right,lightsteelblue,blanchedalmond,lightslategrey);*/
+    background-position: center;
+
+    /*Animation Using @keyframes*/
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/*Standard syntax*/ 
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:orangered; left:200px; top:0px;}
+    50%  {background-color:skyblue;left:200px; top:200px;}
+    75%  {background-color:yellowgreen; left:0px; top:200px;}
+    100% {background-color:plum; left:0px; top:0px;}
+}
+
+footer {
+    /*Layout*/
+    border-radius: 10px;
+    width : 50vw;
+    height :4vh;
+    margin:auto;
+
+    /*Text Control*/
+    text-align: center;
+    font-size: calc(60%);
+    color: antiquewhite;
+
+    /*Color*/
+    /*background-image: linear-gradient(to right,lightsteelblue,blanchedalmond,lightslategrey);*/
+
+
+    /*Animation using @keyframe*/
+    animation-name: noheight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;    
+
+    /*Trasitions*/
+    /*visibility:hidden;*/
+    -webkit-transition: opacity 5s ease-out;
+    -moz-transition: opacity 5s ease-out;
+    -o-transition: opacity 5s ease-out;
+    transition: opacity 5s ease-out;
+    opacity: 0.5; 
+}
+@keyframes noheight {
+    0%    {height:10vh}
+    100% {height:20vh}
+}

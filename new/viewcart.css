@@ -1,0 +1,64 @@
+/*
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: viewcart.css
+Date and Time: Oct 30, 2016 10:26:07 AM
+Project Name: CS557C_HW4
+*/
+/* 
+    Created on : Oct 30, 2016, 10:26:07 AM
+    Author     : YUE
+*/
+
+html{
+    height: 100vh;
+    width : 100vw;
+}
+
+body {
+    height: 100vh;
+    font-family: Myriad Pro;
+    /*background-color: bisque;*/
+    background-image:
+        url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.CartListPage {
+    width: 90%;   
+    margin:auto;
+}
+
+h3 {
+    color: blue;
+}
+
+table {
+    width : 87vw;
+    background-color: pink;
+    border-style: double;
+}
+h1 {
+    text-align: center;
+    color : blue;
+}
+td {
+    /*   width:10%;*/
+    padding: 2px;
+    border-width :1px;
+    border-style: ridge;
+
+    text-align: center;   
+    vertical-align: middle;
+    color : blueviolet;
+}
+div {
+    text-align: center;
+}
+button {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}

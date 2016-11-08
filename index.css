@@ -1,0 +1,65 @@
+/*
+Student Info: Name=YueHu, ID=12980
+Subject: CS557C_HW04_Fall_2016
+Author: YUE
+Filename: homepage.css.css
+Date and Time: Oct 30, 2016 2:32:56 PM
+Project Name: CS557C_HW4
+*/
+/* 
+    Created on : Oct 30, 2016, 2:32:56 PM
+    Author     : YUE
+*/
+
+body {
+    background-color : blue;
+    margin: 0;
+}
+.largePhoto {
+    background-image: url("http://i1.wp.com/f50.io/wp-content/uploads/2016/02/iStock_55076876_XXXLARGE-e1470079200818.jpg?fit=2000%2C1333"); 
+    width: 100%;
+    min-height: 600px;
+    /*background-size: auto 100%;*/
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.pgDesc {
+    background-color:yellow;
+}
+
+#photoText {
+    position:relative;
+    left: 50%;
+    top:50%;
+}
+
+.navbar {
+    background-color: rgba(255,255,255,.5);
+    height : 10vh;
+
+}
+
+#gmap {
+    height : 300px;
+    background-color:pink;
+}
+
+#logo {
+    margin-left: 25px;
+    height : 90%;
+    max-width : 50px;
+    background-color: lightcyan;
+    background-image: url(http://f50.io/wp-content/uploads/2016/10/f50-logo-57x57-1.png);
+    background-size:auto 100%;
+    border-radius: 10px;
+}
+
+#navPage {
+    background-color: red;
+}
+
+.splitScreen {
+    background-color:green;
+    display:inline-block;
+}
