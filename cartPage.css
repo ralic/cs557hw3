@@ -16,3 +16,18 @@ Project Name: CS557C_HW4
     background-color:green;
     display:inline-block;
 }
+
+table {
+    width : 87vw;
+    background-color: pink;
+    border-style: double;
+}
+td {
+/*   width:10%;*/
+   padding: 2px;
+   border-width :1px;
+   border-style: ridge;
+   text-align: center;   
+   vertical-align: middle;
+   color : blueviolet;
+}

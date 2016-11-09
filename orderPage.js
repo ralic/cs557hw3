@@ -23,3 +23,36 @@ window.onload = function () {
   var glossyopts = ['Yes', 'No']
   popChekboxbyID('GlossyFinish', glossyopts)
 }
+
+var addToParentCart = function () {
+  try {
+    var queryItem = {}
+    /*
+        Note : Single selection of the input, use the id directly to acess the element.
+    */
+    queryItem.imgQuality = imgQuality.value
+    /*
+        Multiple selection of radio button/checkbox
+        use :checked to get the required element and its value.
+    */
+    queryItem.itemType = document.querySelector('#TypesofItems input:checked').value
+    queryItem.glossy = document.querySelector('#GlossyFinish input:checked').value
+    if (QuantityofItems.value == '') {
+      throw new Error('Please input quantity')
+    } else {
+      queryItem.quantity = Number(QuantityofItems.value)
+    }
+    var neworder = window.parent.createOrder(queryItem)
+    window.parent.shopCart.push(neworder)
+    localStorage.shopCart = JSON.stringify(window.parent.shopCart)
+    /*
+      Request Sibling Page to add one row
+    */
+    window.parent.cartPage
+      // document.getElementById("cartPage")
+      .contentWindow.addOneRow(neworder)
+  } catch (e) {
+    console.log(e)
+    alert(e)
+  }
+}
